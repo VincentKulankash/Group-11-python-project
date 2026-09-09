@@ -9,13 +9,13 @@ class Pet:
         self.hunger -= amount
         if self.hunger < 0:
             self.hunger = 0
-        print(f"{self.name} has been fed. Hunger level is now {self.hunger}")
+        print(f"{self.name} has been fed.\nHunger level is now {self.hunger}")
 
-    def play(self):
+    def play(self, amount=1):
         if self.energy > 0:
             self.energy -= 1
             self.hunger += 1
-            print (f"{self.name} Played and is now more hungry. Hunger Level: {self.hunger}, Energy Level: {self.energy}")
+            print (f"{self.name} is playing!\nHunger Level: {self.hunger}.\nEnergy Level: {self.energy}")
 
     def status(self):
         print(f"""___Milo ___
@@ -28,4 +28,6 @@ class Pet:
 pet1 =Pet("Milo", 'Dog')
 pet1.feed(3)
 pet1.play()
+pet1.status()
+
       
